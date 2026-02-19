@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 14% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14% 4%;
+    --primary: 209 58% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 74 52% 51%;
+    --secondary-foreground: 220 14% 4%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 45 85% 62%;
+    --accent-foreground: 220 14% 4%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 209 58% 28%;
+    --radius: 0.5rem;
+    --color-coding: #3db2d6;
+    --color-robotics: #f5a200;
+    --color-finance: #16a56b;
+    --color-genai: #6c4ccf;
+    --color-math: #f4c400;
+    --color-english: #e65c4f;
+    --color-science: #d956a8;
+    --color-viewall: #dcc3b6;
+
+    /* Brand Colors */
+    --navy: 209 58% 28%;
+    --lime: 74 52% 51%;
+    --yellow: 45 85% 62%;
+    --dark: 220 14% 4%;
+    --light: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-foreground font-sans antialiased;
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-pastel);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Nunito", sans-serif;
+  }
+}
+
+@layer components {
+  .font-heading {
+    font-family: "Nunito", sans-serif;
+  }
+
+  .font-body {
+    font-family: "Inter", sans-serif;
+  }
+
+  .font-label {
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-    @apply bg-white text-foreground font-sans antialiased;
+    font-family: "Inter", sans-serif;
+  }
+  adius-card {
+    box-shadow: var(--shadow-soft);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  .card-kid:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-soft-hover);
+  }
+
+  .rounded-kid {
+    border-radius: var(--radius-kid);
+  }
+
+  .btn-kid {
+    border-radius: var(--radius-kid);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .btn-kid:hover {
+    transform:
+      translateYease,
+      box-shadow 0.2s ease;
+  }
+}
