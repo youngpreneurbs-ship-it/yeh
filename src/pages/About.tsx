@@ -36,30 +36,35 @@ export function About() {
       icon: Lightbulb,
       title: 'Innovation',
       description: 'We believe every child has creative potential waiting to be unlocked.',
+      color: 'bg-[#3db2d6]',
     },
     {
       icon: Heart,
       title: 'Passion',
       description: 'Learning is most effective when driven by genuine curiosity and enthusiasm.',
+      color: 'bg-[#16a56b]',
     },
     {
       icon: Users,
       title: 'Collaboration',
       description: 'Great ideas emerge when diverse minds work together toward common goals.',
+      color: 'bg-[#f5a200]',
     },
     {
       icon: Target,
       title: 'Impact',
       description: 'We measure success by the real-world skills students develop.',
+      color: 'bg-[#d956a8]',
     },
   ];
 
   const stats = [
-    { number: '5,000+', label: 'Students Empowered' },
-    { number: '150+', label: 'Schools Partnered' },
-    { number: '50+', label: 'Expert Instructors' },
-    { number: '98%', label: 'Parent Satisfaction' },
-  ];
+    { number: '5,000+', label: 'Students Empowered', color: 'bg-[#3db2d6]' },
+    { number: '150+', label: 'Schools Partnered', color: 'bg-[#d956a8]' },
+    { number: '50+', label: 'Expert Instructors', color: 'bg-[#16a56b]' },
+    { number: '98%', label: 'Parent Satisfaction', color: 'bg-[#f5a200]' },
+  ]
+
 
   const team = [
     {
@@ -82,16 +87,17 @@ export function About() {
     },
   ];
 
+
   return (
-    <div ref={sectionRef} className="bg-navy min-h-screen pt-20">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 ">
+    <div ref={sectionRef} className=" min-h-screen ">
+      {/* Hero Section - matches Home CTA gradient */}
+      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-[#4846b6db]  to-[#801280b0] ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="animate-in font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
-              About <span className="bg-gradient-to-r from-yellow-400 to-lime-500 bg-clip-text text-transparent font-black">Young Entrepreneurs Hub</span>
+            <h1 className="animate-in font-heading font-black text-4xl sm:text-5xl lg:text-6xl mb-6">
+              <span className="bg-gradient-to-r from-[#3db2d6]  to-[#f5a20095] bg-clip-text text-transparent font-black">About Young Entrepreneurs Hub</span>
             </h1>
-            <p className="animate-in text-white/80 text-lg lg:text-xl">
+            <p className="animate-in text-gray-300 text-lg lg:text-xl">
               We're on a mission to empower the next generation with the skills,
               mindset, and confidence to turn their ideas into reality.
             </p>
@@ -99,14 +105,14 @@ export function About() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 lg:py-32 bg-gray-50">
+      {/* Mission Section - same gradient as Home "What You'll Learn" */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#3db2d695] via-[#16a56c32] to-[#f5a20095]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center  ">
-            <div className="animate-in">
-              <h2 className="font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-in bg-white rounded-2xl p-8 lg:p-10 border border-gray-200 shadow-lg bg-gradient-to-br from-white to-navy-50/40">
+              <h2 className="font-heading font-black text-3xl sm:text-4xl mb-6 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
                 Our Mission
-              </h2>  
+              </h2>
               <p className="text-gray-600 text-lg mb-6">
                 Young Entrepreneurs Hub was founded in 2018 with a simple belief:
                 every child has the potential to create something amazing. We
@@ -124,12 +130,12 @@ export function About() {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-6 border border-gray-200 shadow-md text-center"
+                  className={`rounded-2xl p-6 border border-gray-200 shadow-lg text-center text-white  ${stat.color}`}
                 >
-                  <div className="font-heading font-black text-3xl lg:text-4xl text-navy-700 mb-2">
+                  <div className="font-heading font-black text-3xl lg:text-4xl mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 text-sm">{stat.label}</div>
+                  <div className="text-white/90 text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -137,11 +143,11 @@ export function About() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      {/* Values Section - same bg as Home programs section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-white via-navy-50/20 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-4">
+            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
               Our Values
             </h2>
             <p className="animate-in text-gray-600 text-lg max-w-2xl mx-auto">
@@ -152,26 +158,26 @@ export function About() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="animate-in bg-white rounded-2xl p-6 border border-gray-200 shadow-md"
+                className={`animate-in rounded-2xl p-6 border border-gray-200 shadow-lg bg-gradient-to-br hover:shadow-xl transition-shadow ${value.color}`}
               >
-                <div className="w-12 h-12 rounded-xl bg-navy-100 flex items-center justify-center mb-4">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${value.color}`}>
                   <value.icon className="h-6 w-6 text-navy-700" />
                 </div>
-                <h3 className="font-heading font-bold text-xl text-navy-900 mb-2">
+                <h3 className="font-heading font-bold text-xl text-black mb-2">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{value.description}</p>
+                <p className="text-black/80 text-sm">{value.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 lg:py-32 bg-gray-50">
+      {/* Team Section - same gradient as Home age tracks */}
+      <section className="py-20 lg:py-32 bg-gradient-to-l from-[#f5a30051] to-[#2cdfdf7f]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-4">
+            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
               Meet Our Team
             </h2>
             <p className="animate-in text-gray-600 text-lg max-w-2xl mx-auto">
@@ -183,7 +189,7 @@ export function About() {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="animate-in bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-md"
+                className="animate-in bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-xl transition-shadow bg-gradient-to-br from-white to-navy-50/30"
               >
                 <div className="h-48 overflow-hidden">
                   <img
@@ -207,8 +213,8 @@ export function About() {
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      {/* Story Section - matches Home curriculum/experience sections */}
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-white via-gray-50/50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
@@ -218,11 +224,11 @@ export function About() {
                 className="w-full h-[400px] object-cover"
               />
             </div>
-            <div className="animate-in">
-              <h2 className="font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-6">
+            <div className="animate-in rounded-2xl p-8 lg:p-10 border border-gray-200 bg-gradient-to-br from-[#3db2d6ae] to-[#e65c4f]/30 shadow-lg">
+              <h2 className="font-heading font-black text-3xl sm:text-4xl mb-6 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
                 Our Story
               </h2>
-              <div className="space-y-4 text-gray-600">
+              <div className="space-y-4 text-gray-700">
                 <p>
                   It all started with a simple observation: traditional education
                   wasn't preparing kids for the real-world challenges they'd face.
@@ -242,7 +248,7 @@ export function About() {
                   the country and continue to expand our reach.
                 </p>
               </div>
-              <div className="mt-8 flex items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-4">
                 <div className="flex items-center gap-2 text-navy-700">
                   <Award className="h-5 w-5" />
                   <span className="font-medium">Award-winning curriculum</span>

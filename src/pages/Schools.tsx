@@ -33,6 +33,8 @@ export function Schools() {
     return () => ctx.revert();
   }, []);
 
+  const offeringColors = ['bg-[#3db2d6]', 'bg-[#d956a8]', 'bg-[#16a56b]', 'bg-[#f5a200]'];
+
   const offerings = [
     {
       icon: Calendar,
@@ -79,23 +81,23 @@ export function Schools() {
   ];
 
   return (
-    <div ref={sectionRef} className="bg-white min-h-screen ">
-      {/* Hero Section */}
-      <section className="relative py-20  bg-white">
+    <div ref={sectionRef} className=" min-h-screen">
+      {/* Hero - same style as Home For Schools */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#a03dd695] via-[#16a56c32] to-[#f5a20095]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-in">
-              <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-navy-900 mb-6">
-                Bring it to <span className="bg-gradient-to-r from-navy to-lime bg-clip-text text-transparent font-black">your school.</span>
+            <div className="animate-in rounded-2xl p-8 lg:p-10 bg-gradient-to-br from-navy-900 via-navy to-navy-800">
+              <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
+                Bring it to <span className="bg-gradient-to-r from-white via-gray-100 to-lime-200 bg-clip-text text-transparent">your school.</span>
               </h1>
-              <p className="text-gray-600 text-lg mb-8">
+              <p className="text-gray-300 text-lg mb-8">
                 Term-time programs, holiday intensives, and teacher
                 resources—designed to fit the school calendar and enhance your
                 curriculum.
               </p>
               <Button
                 asChild
-                className="bg-navy-700 hover:bg-navy-800 text-white font-medium rounded-lg px-8"
+                className="bg-white hover:bg-gray-100 text-navy-900 font-medium rounded-lg px-8"
               >
                 <Link to="/contact">
                   Request a proposal <ArrowRight className="h-4 w-4 ml-2" />
@@ -113,14 +115,14 @@ export function Schools() {
         </div>
       </section>
 
-      {/* What We Offer */}
-      <section className="py-20 lg:py-32 bg-gray-50">
+      {/* What We Offer - brand-colored cards */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#3db2d695] via-[#16a56c32] to-[#f5a20095]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-4">
+            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
               What We Offer
             </h2>
-            <p className="animate-in text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="animate-in text-gray-700 text-lg max-w-2xl mx-auto">
               Flexible programs designed to integrate seamlessly with your school.
             </p>
           </div>
@@ -128,15 +130,15 @@ export function Schools() {
             {offerings.map((offering, index) => (
               <div
                 key={index}
-                className="animate-in bg-white rounded-2xl p-6 border border-gray-200 shadow-md"
+                className={`animate-in rounded-2xl p-6 border border-gray-200 shadow-lg text-white ${offeringColors[index]} hover:shadow-xl transition-shadow`}
               >
-                <div className="w-14 h-14 rounded-xl bg-navy-100 flex items-center justify-center mb-4">
-                  <offering.icon className="h-7 w-7 text-navy-700" />
+                <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center mb-4">
+                  <offering.icon className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-navy-900 mb-2">
+                <h3 className="font-heading font-bold text-lg mb-2">
                   {offering.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{offering.description}</p>
+                <p className="text-white/90 text-sm">{offering.description}</p>
               </div>
             ))}
           </div>
@@ -144,7 +146,7 @@ export function Schools() {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-white via-navy-50/20 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
@@ -154,8 +156,8 @@ export function Schools() {
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
             </div>
-            <div className="animate-in">
-              <h2 className="font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-6">
+            <div className="animate-in rounded-2xl p-8 lg:p-10 border border-gray-200 shadow-lg bg-gradient-to-br from-white to-navy-50/40">
+              <h2 className="font-heading font-black text-3xl sm:text-4xl mb-6 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
                 Why Partner With Us?
               </h2>
               <p className="text-gray-600 text-lg mb-8">
@@ -164,10 +166,7 @@ export function Schools() {
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center gap-3 text-navy-900"
-                  >
+                  <li key={index} className="flex items-center gap-3 text-navy-900">
                     <CheckCircle className="h-5 w-5 text-navy-600 flex-shrink-0" />
                     {benefit}
                   </li>
@@ -179,48 +178,26 @@ export function Schools() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 lg:py-32 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-gradient-to-l from-[#f5a30051] to-[#2cdfdf7f]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-4">
+            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
               How It Works
             </h2>
-            <p className="animate-in text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="animate-in text-gray-700 text-lg max-w-2xl mx-auto">
               Getting started is easy. Here's what to expect.
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              {
-                step: '1',
-                title: 'Initial Consultation',
-                description:
-                  'We discuss your goals, schedule, and how we can best support your school.',
-              },
-              {
-                step: '2',
-                title: 'Custom Proposal',
-                description:
-                  'We create a tailored program proposal based on your specific needs.',
-              },
-              {
-                step: '3',
-                title: 'Teacher Training',
-                description:
-                  'We train your staff on our curriculum and teaching methods.',
-              },
-              {
-                step: '4',
-                title: 'Program Launch',
-                description:
-                  'We launch the program with ongoing support and regular check-ins.',
-              },
+              { step: '1', title: 'Initial Consultation', description: 'We discuss your goals, schedule, and how we can best support your school.' },
+              { step: '2', title: 'Custom Proposal', description: 'We create a tailored program proposal based on your specific needs.' },
+              { step: '3', title: 'Teacher Training', description: 'We train your staff on our curriculum and teaching methods.' },
+              { step: '4', title: 'Program Launch', description: 'We launch the program with ongoing support and regular check-ins.' },
             ].map((item, index) => (
-              <div key={index} className="animate-in text-center">
+              <div key={index} className="animate-in text-center rounded-2xl p-6 border border-gray-200 shadow-lg bg-gradient-to-br from-white to-navy-50/40">
                 <div className="w-16 h-16 rounded-full bg-navy-700 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-heading font-bold text-xl">
-                    {item.step}
-                  </span>
+                  <span className="text-white font-heading font-bold text-xl">{item.step}</span>
                 </div>
                 <h3 className="font-heading font-bold text-lg text-navy-900 mb-2">
                   {item.title}
@@ -233,10 +210,10 @@ export function Schools() {
       </section>
 
       {/* Partner Schools */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-white via-gray-50/50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-4">
+            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
               Schools We Work With
             </h2>
             <p className="animate-in text-gray-600 text-lg max-w-2xl mx-auto">
@@ -247,7 +224,7 @@ export function Schools() {
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="animate-in bg-gray-50 rounded-xl p-6 border border-gray-200 flex items-center justify-center"
+                className="animate-in rounded-xl p-6 border border-gray-200 shadow-md bg-gradient-to-br from-white to-navy-50/30 flex items-center justify-center"
               >
                 <div className="flex items-center gap-3">
                   <School className="h-5 w-5 text-navy-600" />
@@ -259,11 +236,11 @@ export function Schools() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 lg:py-32 bg-navy">
+      {/* CTA - matches Home/About */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-navy via-navy-800 to-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Award className="h-16 w-16 text-white mx-auto mb-6" />
-          <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-white mb-6">
+          <Award className="h-16 w-16 text-white/90 mx-auto mb-6" />
+          <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-white via-gray-100 to-lime-200 bg-clip-text text-transparent">
             Ready to bring entrepreneurship to your school?
           </h2>
           <p className="animate-in text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
@@ -273,14 +250,16 @@ export function Schools() {
           <div className="animate-in flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild
-              className="bg-white hover:bg-gray-100 text-navy-900 font-medium rounded-lg px-8"
+              size="lg"
+              className="bg-gradient-to-r from-[#1e4773] to-[#f5a200] hover:bg-[#1e4773] text-white font-medium rounded-lg px-8"
             >
               <Link to="/contact">Request a proposal</Link>
             </Button>
             <Button
               asChild
-              variant="outline"
-              className="border-white/30  hover:bg-white/10 font-medium rounded-lg px-8"
+              variant="default"
+              size="lg"
+              className="bg-gradient-to-r from-[#1e4773] to-[#f5a200] hover:bg-[#1e4773] text-white font-medium rounded-lg px-8"
             >
               <Link to="/contact">Schedule a call</Link>
             </Button>

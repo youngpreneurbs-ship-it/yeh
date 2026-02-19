@@ -33,6 +33,8 @@ export function CurriculumDesignThinking() {
     return () => ctx.revert();
   }, []);
 
+  const phaseColors = ['bg-[#6c4ccf]', 'bg-[#3db2d6]', 'bg-[#d956a8]', 'bg-[#16a56b]', 'bg-[#f5a200]'];
+
   const phases = [
     {
       icon: Search,
@@ -71,29 +73,29 @@ export function CurriculumDesignThinking() {
   ];
 
   return (
-    <div ref={sectionRef} className="bg-white min-h-screen ">
-      {/* Hero Section */}
-      <section className="relative py-20  bg-white">
+    <div ref={sectionRef} className=" min-h-screen ">
+      {/* Hero - subject gradient */}
+      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-[#6d4ccfb0] to-[#e65c4f]/30 border-b border-gray-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-navy-100 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-white/90 flex items-center justify-center">
                   <BookOpen className="h-6 w-6 text-navy-700" />
                 </div>
-                <span className="text-navy-600 font-medium">Curriculum</span>
+                <span className="text-navy-700 font-medium">Curriculum</span>
               </div>
-              <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-navy-900 mb-6">
+              <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
                 Design Thinking
               </h1>
-              <p className="text-gray-600 text-lg mb-8">
+              <p className="text-gray-700 text-lg mb-8">
                 Research, prototype, test, improve. Our design thinking curriculum
                 teaches a human-centered approach to solving complex problems
                 creatively.
               </p>
               <Button
                 asChild
-                className="bg-navy-700 hover:bg-navy-800 text-white font-medium rounded-lg px-8"
+                className="bg-gradient-to-r from-[#1e4773] to-[#f5a200] hover:bg-[#1e4773] text-white font-medium rounded-lg px-8"
               >
                 <Link to="/contact">
                   Enroll now <ArrowRight className="h-4 w-4 ml-2" />
@@ -112,13 +114,13 @@ export function CurriculumDesignThinking() {
       </section>
 
       {/* The 5 Phases */}
-      <section className="py-20 lg:py-32 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#3db2d695] via-[#16a56c32] to-[#f5a20095]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-4">
+            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
               The 5 Phases
             </h2>
-            <p className="animate-in text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="animate-in text-gray-700 text-lg max-w-2xl mx-auto">
               A proven process for creative problem-solving.
             </p>
           </div>
@@ -126,18 +128,18 @@ export function CurriculumDesignThinking() {
             {phases.map((phase, index) => (
               <div
                 key={index}
-                className="animate-in bg-white rounded-2xl p-5 border border-gray-200 shadow-md"
+                className={`animate-in rounded-2xl p-5 border border-gray-200 shadow-lg text-white ${phaseColors[index]}`}
               >
-                <div className="w-12 h-12 rounded-xl bg-navy-100 flex items-center justify-center mb-4">
-                  <phase.icon className="h-6 w-6 text-navy-700" />
+                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-4">
+                  <phase.icon className="h-6 w-6 text-white" />
                 </div>
-                <div className="text-gray-400 text-sm font-medium mb-1">
+                <div className="text-white/80 text-sm font-medium mb-1">
                   Phase {index + 1}
                 </div>
-                <h3 className="font-heading font-bold text-lg text-navy-900 mb-2">
+                <h3 className="font-heading font-bold text-lg mb-2">
                   {phase.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{phase.description}</p>
+                <p className="text-white/90 text-sm">{phase.description}</p>
               </div>
             ))}
           </div>
@@ -145,7 +147,7 @@ export function CurriculumDesignThinking() {
       </section>
 
       {/* Learning Outcomes */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-white via-navy-50/20 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
@@ -155,8 +157,8 @@ export function CurriculumDesignThinking() {
                 className="w-full h-[400px] object-cover"
               />
             </div>
-            <div className="animate-in order-1 lg:order-2">
-              <h2 className="font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-6">
+            <div className="animate-in order-1 lg:order-2 rounded-2xl p-8 lg:p-10 border border-gray-200 shadow-lg bg-gradient-to-br from-white to-navy-50/40">
+              <h2 className="font-heading font-black text-3xl sm:text-4xl mb-6 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
                 Learning Outcomes
               </h2>
               <p className="text-gray-600 text-lg mb-8">
@@ -164,10 +166,7 @@ export function CurriculumDesignThinking() {
               </p>
               <ul className="space-y-4">
                 {learningOutcomes.map((outcome, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center gap-3 text-navy-900"
-                  >
+                  <li key={index} className="flex items-center gap-3 text-navy-900">
                     <CheckCircle className="h-5 w-5 text-navy-600 flex-shrink-0" />
                     {outcome}
                   </li>
@@ -179,37 +178,25 @@ export function CurriculumDesignThinking() {
       </section>
 
       {/* Projects */}
-      <section className="py-20 lg:py-32 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-gradient-to-l from-[#f5a30051] to-[#2cdfdf7f]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-4">
+            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
               Sample Projects
             </h2>
-            <p className="animate-in text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="animate-in text-gray-700 text-lg max-w-2xl mx-auto">
               Hands-on challenges that apply the design thinking process.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              {
-                title: 'Redesign the Lunch Experience',
-                description:
-                  'Students interview peers about lunch challenges, then design and prototype solutions.',
-              },
-              {
-                title: 'User Interview Challenge',
-                description:
-                  'Conduct interviews with real users to understand their needs and pain points.',
-              },
-              {
-                title: 'Rapid Prototyping Sprint',
-                description:
-                  'Build and test three different prototypes in one session, iterating based on feedback.',
-              },
+              { title: 'Redesign the Lunch Experience', description: 'Students interview peers about lunch challenges, then design and prototype solutions.' },
+              { title: 'User Interview Challenge', description: 'Conduct interviews with real users to understand their needs and pain points.' },
+              { title: 'Rapid Prototyping Sprint', description: 'Build and test three different prototypes in one session, iterating based on feedback.' },
             ].map((project, index) => (
               <div
                 key={index}
-                className="animate-in bg-white rounded-2xl p-6 border border-gray-200 shadow-md"
+                className="animate-in rounded-2xl p-6 border border-gray-200 shadow-lg bg-gradient-to-br from-white to-navy-50/40"
               >
                 <h3 className="font-heading font-bold text-lg text-navy-900 mb-3">
                   {project.title}
@@ -222,25 +209,16 @@ export function CurriculumDesignThinking() {
       </section>
 
       {/* Navigation */}
-      <section className="py-12 bg-white border-t border-gray-200">
+      <section className="py-12 bg-gradient-to-b from-white via-gray-50/30 to-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-between items-center gap-4">
-            <Link
-              to="/curriculum/marketing"
-              className="text-gray-600 hover:text-navy-700 transition-colors"
-            >
+            <Link to="/curriculum/marketing" className="text-gray-600 hover:text-navy-700 transition-colors">
               ← Previous: Marketing
             </Link>
-            <Link
-              to="/curriculum"
-              className="text-gray-600 hover:text-navy-700 transition-colors"
-            >
+            <Link to="/curriculum" className="text-gray-600 hover:text-navy-700 transition-colors">
               Back to Curriculum
             </Link>
-            <Link
-              to="/programs"
-              className="text-gray-600 hover:text-navy-700 transition-colors"
-            >
+            <Link to="/programs" className="text-gray-600 hover:text-navy-700 transition-colors">
               Explore Programs →
             </Link>
           </div>

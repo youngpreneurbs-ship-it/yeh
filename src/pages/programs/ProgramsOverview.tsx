@@ -68,7 +68,7 @@ export function ProgramsOverview() {
         'Team collaboration',
         'Creative problem-solving',
       ],
-      bg: 'bg-white border border-gray-200',
+      cardClass: 'bg-gradient-to-br from-[#3db2d6ae] to-[#e65c4f]/30 border border-gray-200',
       link: '/programs/ages-7-11',
     },
     {
@@ -82,19 +82,26 @@ export function ProgramsOverview() {
         'Pitch development',
         'Business modeling',
       ],
-      bg: 'bg-navy-50 border border-gray-200',
+      cardClass: 'bg-gradient-to-br from-[#6d4ccfb0] to-[#e65c4f]/30 border border-gray-200',
       link: '/programs/ages-12-16',
     },
   ];
 
+  const featureCardColors = [
+    'bg-[#3db2d6]',
+    'bg-[#d956a8]',
+    'bg-[#16a56b]',
+    'bg-[#6c4ccf]',
+  ];
+
   return (
-    <div ref={sectionRef} className="bg-navy min-h-screen pt-20">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 ">
+    <div ref={sectionRef} className="e min-h-scree">
+      {/* Hero Section - matches Home CTA gradient */}
+      <section className="relative py-20 lg:py-32  bg-gradient-to-br from-[#4846b6db]  to-[#801280b0] ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="animate-in font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
-              Our <span className="bg-gradient-to-r from-yellow-400 to-lime-500 bg-clip-text text-transparent font-black">Programs</span>
+            <h1 className="animate-in font-bold text-[#ffffff] text-4xl sm:text-5xl lg:text-6xl mb-6">
+              Our <span className="bg-gradient-to-r from-[#3db2d6]  to-[#f5a20095] bg-clip-text text-transparent font-black">Programs</span>
             </h1>
             <p className="animate-in text-white/80 text-lg lg:text-xl">
               Two levels designed to meet students where they are and take them
@@ -104,23 +111,23 @@ export function ProgramsOverview() {
         </div>
       </section>
 
-      {/* Programs Comparison */}
-      <section className="py-20 lg:py-32 bg-gray-50">
+      {/* Programs Comparison - same gradient as Home "What You'll Learn" */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#3db2d695] via-[#16a56c32] to-[#f5a20095]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8">
             {programs.map((program, index) => (
               <div
                 key={index}
-                className={`animate-in rounded-2xl p-8 lg:p-10 shadow-md ${program.bg}`}
+                className={`animate-in rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-xl transition-shadow ${program.cardClass}`}
               >
                 <div className="mb-6">
-                  <span className="inline-block bg-navy-100 text-navy-700 text-sm font-medium px-4 py-1 rounded-full mb-4">
+                  <span className="inline-block bg-white/80 text-navy-700 text-sm font-medium px-4 py-1 rounded-full mb-4">
                     {program.age}
                   </span>
-                  <h2 className="font-heading font-black text-2xl lg:text-3xl text-navy-900 mb-4">
+                  <h2 className="font-heading font-black text-2xl lg:text-3xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
                     {program.title}
                   </h2>
-                  <p className="text-gray-600">{program.description}</p>
+                  <p className="text-gray-700">{program.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {program.features.map((feature, fIndex) => (
@@ -135,7 +142,7 @@ export function ProgramsOverview() {
                 </ul>
                 <Button
                   asChild
-                  className="bg-navy-700 hover:bg-navy-800 text-white font-medium rounded-lg px-8"
+                  className="bg-gradient-to-r from-[#1e4773] to-[#f5a200] hover:bg-[#1e4773] text-white font-medium rounded-lg px-8"
                 >
                   <Link to={program.link}>
                     Learn more <ArrowRight className="h-4 w-4 ml-2" />
@@ -147,11 +154,11 @@ export function ProgramsOverview() {
         </div>
       </section>
 
-      {/* What's Included */}
-      <section className="py-20 lg:py-32 bg-white">
+      {/* What's Included - same bg as Home programs section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-white via-navy-50/20 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-4">
+            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
               What's Included
             </h2>
             <p className="animate-in text-gray-600 text-lg max-w-2xl mx-auto">
@@ -162,27 +169,27 @@ export function ProgramsOverview() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="animate-in bg-white rounded-2xl p-6 border border-gray-200 shadow-md text-center"
+                className={`animate-in rounded-2xl p-6 border border-gray-200 shadow-lg text-center text-white ${featureCardColors[index]}`}
               >
-                <div className="w-14 h-14 rounded-xl bg-navy-100 flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-7 w-7 text-navy-700" />
+                <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-navy-900 mb-2">
+                <h3 className="font-heading font-bold text-lg mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
+                <p className="text-white/90 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Program Structure */}
-      <section className="py-20 lg:py-32 bg-gray-50">
+      {/* Program Structure - same gradient as Home age tracks */}
+      <section className="py-20 lg:py-32 bg-gradient-to-l from-[#f5a30051] to-[#2cdfdf7f]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-in">
-              <h2 className="font-heading font-black text-3xl sm:text-4xl text-navy-900 mb-6">
+            <div className="animate-in rounded-2xl p-8 lg:p-10 border border-gray-200 shadow-lg bg-gradient-to-br from-white to-navy-50/40">
+              <h2 className="font-heading font-black text-3xl sm:text-4xl mb-6 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
                 Program Structure
               </h2>
               <div className="space-y-6">
@@ -254,13 +261,13 @@ export function ProgramsOverview() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-lime">
+      {/* CTA Section - matches Home CTA */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-navy via-navy-800 to-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl text-white mb-6">
+          <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-white via-gray-100 to-lime-200 bg-clip-text text-transparent">
             Not sure which program is right?
           </h2>
-          <p className="animate-in text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="animate-in text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
             Book a free consultation and we'll help you find the perfect fit for
             your child.
           </p>
@@ -274,7 +281,7 @@ export function ProgramsOverview() {
             <Button
               asChild
               variant="outline"
-              className="border-white/30  hover:bg-white/10  font-medium rounded-lg px-8"
+              className="border-white/30 hover:bg-white/10 text-white font-medium rounded-lg px-8"
             >
               <Link to="/contact">Contact us</Link>
             </Button>
