@@ -99,7 +99,7 @@ export function CurriculumMarketing() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/experience_team_smile.jpg"
+                src="/images/16.jpg"
                 alt="Marketing"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
@@ -160,7 +160,7 @@ export function CurriculumMarketing() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/program_group_table.jpg"
+                src="/images/22.jpg"
                 alt="Learning outcomes"
                 className="w-full h-[400px] object-cover"
               />

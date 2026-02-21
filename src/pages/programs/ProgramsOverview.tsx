@@ -252,7 +252,7 @@ export function ProgramsOverview() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/program_presentation.jpg"
+                src="/images/18.jpg"
                 alt="Program structure"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />

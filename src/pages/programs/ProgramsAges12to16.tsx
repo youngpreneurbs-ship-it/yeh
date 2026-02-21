@@ -141,7 +141,7 @@ export function ProgramsAges12to16() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/age_older_laptop.jpg"
+                src="/images/20.jpg"
                 alt="Teen working on laptop"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
@@ -226,7 +226,7 @@ export function ProgramsAges12to16() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/experience_presenting.jpg"
+                src="/images/17.jpg"
                 alt="Presentation skills"
                 className="w-full h-[400px] object-cover"
               />

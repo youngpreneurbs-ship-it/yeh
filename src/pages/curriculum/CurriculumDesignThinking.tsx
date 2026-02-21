@@ -152,7 +152,7 @@ export function CurriculumDesignThinking() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
               <img
-                src="/images/learn_prototype_closeup.jpg"
+                src="/images/15.jpg"
                 alt="Learning outcomes"
                 className="w-full h-[400px] object-cover"
               />

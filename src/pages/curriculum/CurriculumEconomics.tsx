@@ -99,7 +99,7 @@ export function CurriculumEconomics() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/age_older_laptop.jpg"
+                src="/images/23.jpg"
                 alt="Economics"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
@@ -144,7 +144,7 @@ export function CurriculumEconomics() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
               <img
-                src="/images/program_presentation.jpg"
+                src="/images/23.jpg"
                 alt="Learning outcomes"
                 className="w-full h-[400px] object-cover"
               />

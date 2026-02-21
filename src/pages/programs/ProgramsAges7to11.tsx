@@ -210,7 +210,7 @@ export function ProgramsAges7to11() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/hero_team_collab.jpg"
+                src="/images/17.jpg"
                 alt="Skills development"
                 className="w-full h-[400px] object-cover"
               />

@@ -83,7 +83,7 @@ export function About() {
       name: 'Emily Rodriguez',
       role: 'Lead Instructor',
       bio: 'Former startup founder, now inspiring the next generation of entrepreneurs.',
-      image: '/images/experience_team_smile.jpg',
+      image: '/images/15.jpg',
     },
   ];
 

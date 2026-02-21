@@ -99,7 +99,7 @@ export function CurriculumEntrepreneurship() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/program_group_table.jpg"
+                src="/images/21.jpg"
                 alt="Entrepreneurship"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
@@ -160,7 +160,7 @@ export function CurriculumEntrepreneurship() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/learn_prototype_closeup.jpg"
+                src="/images/20.jpg"
                 alt="Learning outcomes"
                 className="w-full h-[400px] object-cover"
               />
