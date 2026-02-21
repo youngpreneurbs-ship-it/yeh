@@ -246,7 +246,7 @@ export function Home() {
               <img
                 src="/images/program_group_table.jpg"
                 alt="Students collaborating"
-                className="w-full h-[250px] lg:h-full object-cover"
+                className="w-full h-[250px] lg:h-full max-h-[400px] object-cover"
               />
             </div>
 
@@ -255,7 +255,7 @@ export function Home() {
               <img
                 src="/images/program_presentation.jpg"
                 alt="Student presenting"
-                className="w-full h-[300px] lg:h-[400px] object-cover"
+                className="w-full h-[300px] lg:h-[400px] max-h-[400px] object-cover"
               />
             </div>
 
@@ -307,7 +307,7 @@ export function Home() {
               <img
                 src="/images/age_younger_crafts.jpg"
                 alt="Younger children crafting"
-                className="w-full h-[250px] lg:h-full object-cover"
+                className="w-full h-[250px] lg:h-full max-h-[400px] object-cover"
               />
             </div>
 
@@ -384,7 +384,7 @@ export function Home() {
               <img
                 src="/images/age_older_laptop.jpg"
                 alt="Student working on laptop"
-                className="w-full h-[250px] lg:h-full object-cover"
+                className="w-full h-[250px] lg:h-full max-h-[400px] object-cover"
               />
             </div>
           </div>
@@ -466,7 +466,7 @@ export function Home() {
               <img
                 src="/images/experience_presenting.jpg"
                 alt="Student presenting"
-                className="w-full h-[400px] lg:h-[600px] object-cover"
+                className="w-full h-[400px] lg:h-[600px]  object-cover"
               />
             </div>
 
