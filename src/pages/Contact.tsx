@@ -94,32 +94,27 @@ export function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@younghub.academy',
-      href: 'mailto:hello@younghub.academy',
+      value: 'info@youngpreneurbs.com',
+      href: 'mailto:info@youngpreneurbs.com',
       color: 'bg-[#3db2d6]',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 014-2201',
-      href: 'tel:+15550142201',
+      value: '0403 593 061',
+      href: 'tel:0403593061',
       color: 'bg-[#d956a8]',
     },
     {
       icon: Clock,
       label: 'Hours',
-      value: 'Mon–Fri, 9am–5pm',
+      value: 'Tuesday - Saturday, 10am – 9pm',
       href: null,
       color: 'bg-[#16a56b]',
     },
   ];
 
-  const quickLinks = [
-    { name: 'Programs', path: '/programs', color: 'bg-[#3db2d6]' },
-    { name: 'Curriculum', path: '/curriculum', color: 'bg-[#d956a8]' },
-    { name: 'For Parents', path: '/parents', color: 'bg-[#16a56b]' },
-    { name: 'For Schools', path: '/schools', color: 'bg-[#f5a200]' },
-  ];
+
 
   return (
     <div ref={sectionRef} className=" min-h-screen ">
@@ -131,7 +126,7 @@ export function Contact() {
               Let's <span className="bg-gradient-to-r from-[#3db2d6]  to-[#f5a20095] bg-clip-text text-transparent font-black">build something.</span>
             </h1>
             <p className="animate-in text-black/70 text-lg lg:text-xl">
-              Book a free taster session or ask us anything. We reply within 24
+              Book a free trial session or ask us anything. We reply within 24
               hours.
             </p>
           </div>
@@ -230,14 +225,14 @@ export function Contact() {
                             <SelectValue placeholder="Select an option" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="taster">
-                              Free taster session
+                            <SelectItem value="trial">
+                              Free trial session
                             </SelectItem>
-                            <SelectItem value="7-11">
-                              Program for ages 7-11
+                            <SelectItem value="8-11">
+                              Program for ages 8-11
                             </SelectItem>
-                            <SelectItem value="12-16">
-                              Program for ages 12-16
+                            <SelectItem value="12-18">
+                              Program for ages 12-18
                             </SelectItem>
                             <SelectItem value="school">
                               School partnership
@@ -291,7 +286,7 @@ export function Contact() {
                   Get in touch
                 </h2>
                 <p className="text-gray-600">
-                  Have questions about our programs? Want to book a free taster?
+                  Have questions about our programs? Want to book a free trial?
                   We'd love to hear from you.
                 </p>
               </div>
@@ -335,30 +330,7 @@ export function Contact() {
         </div>
       </section>
 
-      {/* Quick Links - brand-colored tiles */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-white via-navy-50/20 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
-              Quick Links
-            </h2>
-            <p className="animate-in text-gray-600 text-lg">
-              Find what you're looking for faster.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {quickLinks.map((link, index) => (
-              <Link
-                key={index}
-                to={link.path}
-                className={`animate-in rounded-2xl p-6 text-center text-white font-heading font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all ${link.color}`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }

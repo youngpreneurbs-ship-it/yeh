@@ -1,13 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,37 +20,15 @@ export function Navigation() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    {
-      name: 'Programs',
-      path: '/programs',
-      children: [
-        { name: 'Overview', path: '/programs' },
-        { name: 'Ages 7–11', path: '/programs/ages-7-11' },
-        { name: 'Ages 12–16', path: '/programs/ages-12-16' },
-      ],
-    },
-    {
-      name: 'Curriculum',
-      path: '/curriculum',
-      children: [
-        { name: 'Overview', path: '/curriculum' },
-        { name: 'Entrepreneurship', path: '/curriculum/entrepreneurship' },
-        { name: 'Economics', path: '/curriculum/economics' },
-        { name: 'Marketing', path: '/curriculum/marketing' },
-        { name: 'Design Thinking', path: '/curriculum/design-thinking' },
-      ],
-    },
-    { name: 'Parents', path: '/parents' },
-    { name: 'Schools', path: '/schools' },
-    // { name: 'Contact', path: '/contact' },
+    { name: 'Programs', path: '/programs' },
+    { name: 'Curriculum', path: '/curriculum' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
     <header
-      className={`sticky py-2 top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
-        isScrolled ? 'shadow-md border-b border-gray-100' : 'border-b border-gray-100'
-      }`}
+      className={`sticky py-2 top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? 'shadow-md border-b border-gray-100' : 'border-b border-gray-100'
+        }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -67,60 +39,23 @@ export function Navigation() {
               alt="Young Entrepreneurs Hub"
               className="h-16 w-auto object-contain"
             />
-          
+
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) =>
-              link.children ? (
-                <DropdownMenu key={link.name}>
-                  <DropdownMenuTrigger asChild>
-                    <button
-                      className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        isActive(link.path) || link.children.some(c => isActive(c.path))
-                          ? 'text-navy-700 bg-navy-50'
-                          : 'text-gray-700 hover:text-navy-700 hover:bg-gray-50'
-                      }`}
-                    >
-                      {link.name}
-                      <ChevronDown className="h-4 w-4" />
-                    </button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent
-                    align="start"
-                    className="bg-white border border-gray-200 shadow-lg"
-                  >
-                    {link.children.map((child) => (
-                      <DropdownMenuItem key={child.path} asChild>
-                        <Link
-                          to={child.path}
-                          className={`text-sm ${
-                            isActive(child.path)
-                              ? 'text-navy-700 bg-navy-50'
-                              : 'text-gray-700 hover:text-navy-700 hover:bg-gray-50'
-                          }`}
-                        >
-                          {child.name}
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              ) : (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(link.path)
-                      ? 'text-navy-700 bg-navy-50'
-                      : 'text-gray-700 hover:text-navy-700 hover:bg-gray-50'
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(link.path)
+                  ? 'text-navy-700 bg-navy-50'
+                  : 'text-gray-700 hover:text-navy-700 hover:bg-gray-50'
                   }`}
-                >
-                  {link.name}
-                </Link>
-              )
-            )}
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
 
           {/* CTA Button */}
@@ -129,7 +64,7 @@ export function Navigation() {
               asChild
               className="bg-navy hover:bg-navy-800 text-white font-medium rounded-lg px-6"
             >
-              <Link to="/contact">Join a free taster</Link>
+              <Link to="/contact">Join a free trial</Link>
             </Button>
           </div>
 
@@ -151,41 +86,17 @@ export function Navigation() {
           <div className="lg:hidden bg-white border-t border-gray-100">
             <div className="py-4 space-y-1">
               {navLinks.map((link) => (
-                <div key={link.name}>
-                  {link.children ? (
-                    <div className="space-y-1">
-                      <span className="block px-4 py-2 text-gray-500 text-sm font-label uppercase tracking-wider">
-                        {link.name}
-                      </span>
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.path}
-                          to={child.path}
-                          className={`block px-8 py-2 text-sm ${
-                            isActive(child.path)
-                              ? 'text-navy-700 bg-navy-50'
-                              : 'text-gray-700'
-                          }`}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {child.name}
-                        </Link>
-                      ))}
-                    </div>
-                  ) : (
-                    <Link
-                      to={link.path}
-                      className={`block px-4 py-2 text-sm font-medium ${
-                        isActive(link.path)
-                          ? 'text-navy-700 bg-navy-50'
-                          : 'text-gray-700'
-                      }`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                  )}
-                </div>
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`block px-4 py-2 text-sm font-medium ${isActive(link.path)
+                    ? 'text-navy-700 bg-navy-50'
+                    : 'text-gray-700'
+                    }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
               ))}
               <div className="pt-4 px-4">
                 <Button
@@ -193,7 +104,7 @@ export function Navigation() {
                   className="w-full bg-lime hover:bg-navy-800 text-white font-medium rounded-lg"
                 >
                   <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                    Join a free taster
+                    Join a free trial
                   </Link>
                 </Button>
               </div>
