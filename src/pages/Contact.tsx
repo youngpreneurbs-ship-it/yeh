@@ -309,7 +309,7 @@ export function Contact() {
 
               <div className="relative rounded-2xl overflow-hidden shadow-lg ring-2 ring-white/50">
                 <img
-                  src="/images/contact_maker_scene.jpg"
+                  src="/images/2.jpg"
                   alt="Maker scene"
                   className="w-full h-[250px] object-cover"
                 />

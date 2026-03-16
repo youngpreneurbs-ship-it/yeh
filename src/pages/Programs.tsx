@@ -37,7 +37,7 @@ export function Programs() {
       title: 'Foundation ',
       age: 'Ages 8–11',
       learnLabel: 'Students learn:',
-      image: '/images/age_younger_crafts.jpg',
+      image: '/images/6.jpg',
       description:
         'At this stage, students are introduced to basic business and economic thinking through stories,  discussions, and simple real-life examples.',
       learn: [
@@ -56,7 +56,7 @@ export function Programs() {
       title: 'Foundation + Advanced  ',
       age: 'Ages 12–18',
       learnLabel: ' Everything in the Foundation course +',
-      image: '/images/age_older_laptop.jpg',
+      image: '/images/7.jpg',
       description:
         'This level is designed for mature learners who can analyse, compare, and reason.',
       learn: [

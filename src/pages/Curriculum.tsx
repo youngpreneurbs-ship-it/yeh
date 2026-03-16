@@ -125,7 +125,7 @@ export function Curriculum() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/learn_postit_wall.jpg"
+                src="/images/8.jpg"
                 alt="How learning happens"
                 className="w-full h-[300px] lg:h-[380px] object-cover"
               />
@@ -140,7 +140,7 @@ export function Curriculum() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
               <img
-                src="/images/experience_team_smile.jpg"
+                src="/images/9.jpg"
                 alt="Role plays and applied learning"
                 className="w-full h-[300px] lg:h-[380px] object-cover"
               />
@@ -189,7 +189,7 @@ export function Curriculum() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg order-1 lg:order-2">
               <img
-                src="/images/parent_laptop_help.jpg"
+                src="/images/5.jpg"
                 alt="Classwork and home activities"
                 className="w-full h-[300px] lg:h-[380px] object-cover"
               />
@@ -223,7 +223,7 @@ export function Curriculum() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/experience_presenting.jpg"
+                src="/images/3.jpg"
                 alt="Skills students develop"
                 className="w-full h-[300px] lg:h-[380px] object-cover"
               />

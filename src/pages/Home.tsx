@@ -72,7 +72,7 @@ export function Home() {
             <div className="hero-photo relative order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-xl max-h-[300px] md:max-h-[500px]">
                 {/* Optional: add hero image e.g. /images/hero_team_collab.jpg */}
-                <img src="/images/hero_team_collab.jpg" alt="Youngpreneurs Business School" className="w-full h-full object-cover" />
+                <img src="/images/1.jpeg" alt="Youngpreneurs Business School" className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="hero-content order-1 lg:order-2 space-y-6">
@@ -120,7 +120,7 @@ export function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/learn_prototype_closeup.jpg"
+                src="/images/2.jpg"
                 alt="Youngpreneurs learning"
                 className="w-full h-[300px] lg:h-[500px] object-cover"
               />
@@ -179,7 +179,7 @@ export function Home() {
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/images/age_younger_crafts.jpg"
+                src="/images/3.jpg"
                 alt="Programs"
                 className="w-full h-[300px] lg:h-[380px] object-cover"
               />
@@ -194,7 +194,7 @@ export function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
               <img
-                src="/images/age_older_laptop.jpg"
+                src="/images/4.jpg"
                 alt="Curriculum"
                 className="w-full h-[300px] lg:h-[380px] object-cover"
               />
@@ -228,49 +228,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* 5. For Parents + image */}
-      {/* <section ref={parentsRef} className="py-20 lg:py-32 bg-gradient-to-b from-[#a03dd695] via-[#16a56c32] to-[#f5a20095]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="animate-in space-y-6">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="/images/parent_reading.jpg"
-                  alt="For parents"
-                  className="w-full h-[250px] lg:h-[300px] object-cover"
-                />
-              </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="/images/parent_laptop_help.jpg"
-                  alt="Parent and child"
-                  className="w-full h-[250px] lg:h-[300px] object-cover"
-                />
-              </div>
-            </div>
-            <div className="animate-in rounded-2xl p-8 lg:p-10 border border-gray-200 bg-white">
-              <h2 className="font-heading font-black text-3xl sm:text-4xl mb-6 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
-                For Parents
-              </h2>
-              <p className="text-gray-800 text-lg mb-4">
-                Youngpreneurs helps children:
-              </p>
-              <ul className="space-y-2 text-gray-600 text-lg mb-6 list-none">
-                <li>● Think independently</li>
-                <li>● Understand money and markets</li>
-                <li>● Make informed decisions</li>
-                <li>● Communicate confidently</li>
-                <li>● Develop responsibility and discipline</li>
-              </ul>
-              <p className="text-gray-600 text-lg mb-8">
-                This is <b>long-term skill-building</b> , not short-term activity learning.
-              </p>
-
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* 6. For Schools & Institutions + image */}
       <section ref={schoolsRef} className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-navy-50/20 to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -300,53 +257,17 @@ export function Home() {
             <div className="animate-in space-y-6">
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="/images/school_classroom.jpg"
+                  src="/images/5.jpg"
                   alt="School classroom"
-                  className="w-full h-[250px] lg:h-[300px] object-cover"
+                  className="w-full h-[250px] lg:h-[430px] object-cover"
                 />
               </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="/images/school_teacher_desk.jpg"
-                  alt="School and teacher"
-                  className="w-full h-[250px] lg:h-[300px] object-cover"
-                />
-              </div>
+
             </div>
           </div>
         </div>
       </section>
-      {/* Our Vision */}
-      {/* <section className="py-20 lg:py-32 bg-gradient-to-br from-[#3db2d695] via-[#16a56c32] to-[#f5a20095]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
-              <img
-                src="/images/hero_team_collab.jpg"
-                alt="Our vision — students learning and collaborating"
-                className="w-full h-[280px] lg:h-[350px] object-cover"
-              />
-            </div>
-            <div className="animate-in max-w-xl mx-auto lg:mx-0 text-center lg:text-left order-1 lg:order-2">
-              <h2 className="font-heading font-black text-3xl sm:text-4xl mb-6 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
-                Our Vision
-              </h2>
-              <p className="text-gray-600 text-lg mb-4">
-                We aim to nurture a generation that:
-              </p>
-              <ul className="space-y-2 text-gray-600 text-lg mb-6 list-none">
-                <li>● Understands how the real world works</li>
-                <li>● Thinks before acting</li>
-                <li>● Makes ethical and informed decisions</li>
-                <li>● Is confident, capable, and curious</li>
-              </ul>
-              <p className="text-gray-700 text-xl font-semibold">
-                Entrepreneurship is not the goal — thinking is.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> */}
+
       {/* CTA */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-navy via-navy-800 to-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
