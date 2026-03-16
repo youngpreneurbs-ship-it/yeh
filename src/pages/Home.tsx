@@ -68,9 +68,9 @@ export function Home() {
       {/* 1. Hero / Banner */}
       <section ref={heroRef} className="relative md:pt-20 py-6 lg:pt-0 overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:min-h-screen flex items-center">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full py-12 lg:py-0">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full  lg:py-0">
             <div className="hero-photo relative order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl max-h-[500px]">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl max-h-[300px] md:max-h-[500px]">
                 {/* Optional: add hero image e.g. /images/hero_team_collab.jpg */}
                 <img src="/images/hero_team_collab.jpg" alt="Youngpreneurs Business School" className="w-full h-full object-cover" />
               </div>
@@ -90,20 +90,20 @@ export function Home() {
               <div className="grid sm:grid-cols-2 gap-4 pt-4">
                 <Link
                   to="/programs"
-                  className="hero-card-green group bg-[#3db2d6] rounded-xl p-5 border border-gray-200 shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
+                  className="hero-card-green group bg-[#3db2d6a9] rounded-xl p-5 border border-gray-200 shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
                 >
                   <div className="flex items-start justify-between mb-3">
-                    <Lightbulb className="h-10 w-10 text-[#d956a8]" />
+                    <Lightbulb className="h-10 w-10 text-[#ffffff]" />
                     <ArrowRight className="h-5 w-5 text-[#d956a8] opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <h3 className="font-heading font-bold text-white text-lg mb-1">Programs for ages 8–11</h3>
                 </Link>
                 <Link
                   to="/programs"
-                  className="hero-card-yellow group bg-[#e65c4f] rounded-xl p-5 border border-gray-200 shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
+                  className="hero-card-yellow group bg-[#e65b4faf] rounded-xl p-5 border border-gray-200 shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
                 >
                   <div className="flex items-start justify-between mb-3">
-                    <Zap className="h-10 w-10 text-[#f5a200]" />
+                    <Zap className="h-10 w-10 text-[#ffffff]" />
                     <ArrowRight className="h-5 w-5 text-[#f5a200] opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <h3 className="font-heading font-bold text-white text-lg mb-1">Programs for ages 12–18</h3>
@@ -122,7 +122,7 @@ export function Home() {
               <img
                 src="/images/learn_prototype_closeup.jpg"
                 alt="Youngpreneurs learning"
-                className="w-full h-[400px] lg:h-[500px] object-cover"
+                className="w-full h-[300px] lg:h-[500px] object-cover"
               />
             </div>
             <div className="animate-in">
@@ -317,7 +317,7 @@ export function Home() {
         </div>
       </section>
       {/* Our Vision */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-[#3db2d695] via-[#16a56c32] to-[#f5a20095]">
+      {/* <section className="py-20 lg:py-32 bg-gradient-to-br from-[#3db2d695] via-[#16a56c32] to-[#f5a20095]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
@@ -346,7 +346,7 @@ export function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* CTA */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-navy via-navy-800 to-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

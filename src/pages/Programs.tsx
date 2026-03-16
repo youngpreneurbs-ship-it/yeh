@@ -39,40 +39,43 @@ export function Programs() {
       learnLabel: 'Students learn:',
       image: '/images/age_younger_crafts.jpg',
       description:
-        'At this stage, students are introduced to basic business and economic thinking through stories, guided discussions, and simple real-life examples.',
+        'At this stage, students are introduced to basic business and economic thinking through stories,  discussions, and simple real-life examples.',
       learn: [
-        'What businesses do and why they exist',
-        'Basic money concepts and choices',
-        'Simple marketing ideas',
-        'Introduction to problem-solving and design thinking',
-        'Working in teams and expressing ideas',
+        'Understanding business foundations',
+        'Identifying customers and markets',
+        'Marketing and promotion strategies',
+        'Building an online presence',
+        'Understanding money and business economics',
+        'Learning demand, supply, and pricing',
+        'Developing creative problem-solving skills',
+        'Launching and presenting business ideas',
       ],
-      note: 'Learning is structured but playful, ensuring strong conceptual foundations without pressure.',
       cardClass: 'bg-gradient-to-br from-[#3db2d6ae] to-[#e65c4f]/30 border border-gray-200',
     },
     {
       title: 'Foundation + Advanced  ',
       age: 'Ages 12–18',
-      learnLabel: 'Students explore:',
+      learnLabel: ' Everything in the Foundation course +',
       image: '/images/age_older_laptop.jpg',
       description:
         'This level is designed for mature learners who can analyse, compare, and reason.',
       learn: [
-        'Entrepreneurship and decision-making',
-        'Market research and customer behaviour',
-        'Marketing strategy and branding',
-        'Economics and pricing fundamentals',
-        'Design thinking and innovation processes',
-        'Ethics, responsibility, and real-world impact',
+        'Business fundamentals and economics',
+        'Financial planning and management',
+        'Marketing strategy and brand development',
+        'Digital presence and e-commerce',
+        'Operations and supply chain management',
+        'Customer insights and market research',
+        'Design thinking and innovation',
+        'Leadership, ethics, and soft skills',
       ],
-      note: 'The focus shifts from what happens to why it happens.',
       cardClass: 'bg-gradient-to-br from-[#6d4ccfb0] to-[#e65c4f]/30 border border-gray-200',
     },
   ];
 
   return (
     <div ref={sectionRef} className="min-h-screen">
-      <section className="relative py-20 lg:py-32 bg-[#ffffff] ">
+      <section className="relative py-12 lg:py-12 bg-[#ffffff] ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className=" ">
             <div className="text-center lg:text-center">
@@ -131,7 +134,7 @@ export function Programs() {
             {programs.map((program, index) => (
               <div
                 key={index}
-                className={`rounded-2xl p-8 lg:p-10 shadow-lg ${program.cardClass}`}
+                className={`rounded-2xl px-4 py-4 lg:px-4 lg:py-6 shadow-lg ${program.cardClass}`}
               >
                 <div className="relative rounded-2xl mb-4 overflow-hidden shadow-lg">
                   <img
@@ -156,7 +159,6 @@ export function Programs() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-gray-700 text-sm italic">{program.note}</p>
               </div>
             ))}
           </div>

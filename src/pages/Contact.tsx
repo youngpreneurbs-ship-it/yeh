@@ -118,16 +118,16 @@ export function Contact() {
   return (
     <div ref={sectionRef} className=" min-h-screen ">
       {/* Hero - matches site CTA */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#a03dd695] via-[#16a56c32] to-[#f5a20095]">
+      <section className="relative py-12 md:py-12 bg-gradient-to-br from-[#a03dd695] via-[#16a56c32] to-[#f5a20095]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="animate-in font-heading font-black text-4xl sm:text-5xl lg:text-6xl mb-6">
-              Let's <span className="bg-gradient-to-r from-[#3db2d6]  to-[#f5a20095] bg-clip-text text-transparent font-black">build something.</span>
+            <span className="bg-gradient-to-r from-[#3db2d6]  to-[#f5a20095] bg-clip-text text-transparent font-black">Get in touch</span>
             </h1>
-            <p className="animate-in text-black/70 text-lg lg:text-xl">
+            {/* <p className="animate-in text-black/70 text-lg lg:text-xl">
               Book a free trial session or ask us anything. We reply within 24
               hours.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -280,15 +280,6 @@ export function Contact() {
 
             {/* Contact Info - brand-colored cards */}
             <div className="animate-in space-y-8">
-              <div className="rounded-2xl p-6 border border-gray-200 shadow-lg bg-gradient-to-br from-white to-navy-50/40">
-                <h2 className="font-heading font-black text-2xl mb-4 bg-gradient-to-r from-navy-900 to-navy bg-clip-text text-transparent">
-                  Get in touch
-                </h2>
-                <p className="text-gray-600">
-                  Have questions about our programs? Want to book a free trial?
-                  We'd love to hear from you.
-                </p>
-              </div>
 
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (

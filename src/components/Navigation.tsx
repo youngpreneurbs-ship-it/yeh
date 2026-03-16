@@ -27,7 +27,7 @@ export function Navigation() {
 
   return (
     <header
-      className={`sticky py-2 top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? 'shadow-md border-b border-gray-100' : 'border-b border-gray-100'
+      className={`sticky py-2 top-0 left-0 right-0 z-50 transition-all duration-300  bg-white  ${isScrolled ? 'shadow-md border-b border-gray-200' : 'border-b border-gray-200'
         }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +64,7 @@ export function Navigation() {
               asChild
               className="bg-navy hover:bg-navy-800 text-white font-medium rounded-lg px-6"
             >
-              <Link to="/contact">Join a free trial</Link>
+              <Link to="/eoi">Expression Of Interest</Link>
             </Button>
           </div>
 
@@ -72,7 +72,7 @@ export function Navigation() {
           <button
             className="lg:hidden p-2 text-gray-700"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
+          >8eikr
             {isMobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (

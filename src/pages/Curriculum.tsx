@@ -2,67 +2,27 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Lightbulb, TrendingUp, Target, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const modules = [
   {
-    icon: Lightbulb,
+    image: '/images/business_basics.jpeg',
     title: 'Module 1: Business Basics',
-    summary: 'Students learn how ideas turn into ventures and how decisions are made.',
-    topics: [
-      'Entrepreneurship mindset',
-      'Goal setting and planning',
-      'Risk and reward',
-      'Problem-solving frameworks',
-      'Leadership and teamwork',
-      'Ethics and responsibility',
-    ],
-    bg: 'bg-[#3db2d6]',
+
   },
   {
-    icon: TrendingUp,
+    image: '/images/marketing_playbook.jpeg',
     title: 'Module 2: Marketing Playbook',
-    summary: 'Students understand how markets, money, and choices work.',
-    topics: [
-      'Demand and supply',
-      'Pricing basics',
-      'Market systems',
-      'Competition',
-      'Consumer behaviour',
-      'Role of government and society',
-    ],
-    bg: 'bg-[#d956a8]',
   },
   {
-    icon: Target,
+    image: '/images/business_economics.jpeg',
     title: 'Module 3: Business Economics',
-    summary: 'Students learn how businesses connect with customers.',
-    topics: [
-      'The 4Ps of marketing',
-      'Branding and positioning',
-      'Customer segments',
-      'Digital marketing basics',
-      'Communication strategies',
-      'Real-world marketing analysis',
-    ],
-    bg: 'bg-[#16a56b]',
   },
   {
-    icon: BookOpen,
+    image: '/images/design_thinking_innovation.jpeg',
     title: 'Module 4: Design Thinking & Innovation',
-    summary: 'Students learn how to solve problems creatively and systematically.',
-    topics: [
-      'Understanding user needs',
-      'Idea generation',
-      'Prototyping',
-      'Testing and feedback',
-      'Innovation mindset',
-      'Turning ideas into solutions',
-    ],
-    bg: 'bg-[#6c4ccf]',
   },
 ];
 
@@ -93,12 +53,12 @@ export function Curriculum() {
 
   return (
     <div ref={sectionRef} className="min-h-screen">
-      <section className="relative py-20 lg:py-32 bg-[#ffffff]">
+      <section className="relative py-12 lg:py-12 bg-[#ffffff]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="">
             <div className="text-center">
               <h1 className="animate-in font-heading font-black text-4xl sm:text-5xl lg:text-6xl mb-6">
-                 <span className="bg-gradient-to-r from-[#91b542] to-[#f5a20095] bg-clip-text text-transparent font-black">Our Curriculum</span>
+                <span className="bg-gradient-to-r from-[#91b542] to-[#f5a20095] bg-clip-text text-transparent font-black">Our Curriculum</span>
               </h1>
               <p className="animate-in text-gray-600 t  ext-lg lg:text-xl">
                 Four core modules, each with 10 structured chapters. Concept → application → reflection.
@@ -112,14 +72,14 @@ export function Curriculum() {
       {/* Curriculum Structure */}
       <section className="py-12 lg:py-12 bg-gradient-to-br from-[#3db2d695] via-[#16a56c32] to-[#f5a20095]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {modules.map((mod, index) => (
               <div
                 key={index}
-                className={`animate-in rounded-2xl p-6 shadow-lg text-white ${mod.bg}`}
+                className={`animate-in  shadow-lg  hover:shadow-xl hover:-translate-y-1 transition-all rounded-md overflow-hidden`}
               >
-                <mod.icon className="h-10 w-10 mb-4 text-white/90" />
+                {/* <mod.icon className="h-10 w-10 mb-4 text-white/90" />
                 <h3 className="font-heading font-bold text-xl mb-2">{mod.title}</h3>
                 <p className="text-sm text-white/90 mb-4">{mod.summary}</p>
                 <p className="text-white/90 font-medium text-sm mb-2">Topics include:</p>
@@ -127,11 +87,16 @@ export function Curriculum() {
                   {mod.topics.map((t, i) => (
                     <li key={i}>● {t}</li>
                   ))}
-                </ul>
+                </ul> */}
+                <img
+                  src={mod?.image || ''}
+                  alt={mod?.title}
+                  className="w-full h-full object-cover  rounded-md hover:-translate-y-3 transition-all"
+                />
               </div>
             ))}
           </div>
-        
+
         </div>
       </section>
 
@@ -146,7 +111,7 @@ export function Curriculum() {
               <p className="animate-in text-gray-600 text-lg mb-6">
                 Youngpreneurs classes are designed to keep students mentally engaged, not passively listening.
               </p>
-              <p className="animate-in text-gray-700 font-medium mb-2">Each chapter includes:</p>
+              <p className="animate-in text-gray-700 font-medium mb-2 text-lg">Each chapter includes:</p>
               <ul className="animate-in space-y-2 text-gray-600 text-lg mb-6 list-none">
                 <li>● Clear conceptual explanations</li>
                 <li>● Real-life and age-appropriate case studies</li>
