@@ -9,26 +9,46 @@ gsap.registerPlugin(ScrollTrigger);
 const centres = [
     {
         name: 'The Ponds',
-        courses: 'Abacus, Vedicmath, Chess, Public Speaking/Debating/Creative Writing, Rubik’s Cube',
-        timings: 'Monday 4:30 – 7:30 PM\nThursday 4:30 – 7:00 PM\nSaturday 10:30 AM – 12:00 PM',
-        educator: 'Priya',
-        address: 'The Ponds High School, Room Number DG37',
+        timings: 'Wednesday 3:15 – 4:45 PM',
+        address: 'The Ponds High School',
+        link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUM0NUWTVPNzhMMkNRMFM5Q0k1N0g1Rk8zTi4u",
+        bgColor: 'from-[#b7e1ed] to-[#f5a300d0]'
     },
     {
-        name: 'Marsden Park',
-        courses: 'Abacus, Vedicmath, Chess, Public Speaking/Debating/Creative Writing, Rubik’s Cube',
-        timings: 'Tuesday 4:30 – 7:30 PM',
-        educator: 'Priya',
-        address: 'Hub behind Elara sales centre',
+        name: 'Bella Vista',
+        timings: 'Saturday 12:45 – 2:15 PM',
+        address: 'Suite 10, Level 1, 4A Meridian Place, Bella Vista, NSW 2153',
+        link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUOFRKQkxCT0dZQ0FVWlY1Qk1WRDJRSEdKVS4u",
+        bgColor: 'from-[#f5a300d0] to-[#16a56c80]'
     },
     {
-        name: 'Epping',
-        courses: 'Abacus, Vedicmath, Chess, Public Speaking/Debating/Creative Writing, Rubik’s Cube',
-        timings: 'Friday 6:00 – 7:30 PM',
-        educator: 'Priya',
-        address: 'Boronia Grove Community Centre',
+        name: 'Quakers Hill',
+        timings: 'To be finalised',
+        address: 'T2A Nirimba Education Precinct, Warawara Cct, Quakers Hill NSW 2763',
+        link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUMjRRWEJROEdMS1ZHQlg3QUdGMzU3UThGVS4u",
+        bgColor: 'from-[#16a56c80] to-[#3db2d6]'
     },
-
+    {
+        name: 'Rouse Hill',
+        timings: 'To be finalised',
+        address: 'Vinegar Hill Memorial Community Centre',
+        link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUOEhXSTFKNEpYVEtSSDVaVzlNVFVYQ0xOWi4u",
+        bgColor: 'from-[#3db2d6] to-[#e5d1a9d0]'
+    },
+    {
+        name: 'Box Hill',
+        timings: 'To be finalised',
+        address: 'Anthony Skarratt Reserve\n8 Nelson Rd, Box Hill NSW 2765',
+        link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUN0lTWTBIV1pIUDIyRDlLMVpMV0FUTTdJQy4u",
+        bgColor: 'from-[#f5a300d0] to-[#b7e1ed]'
+    },
+    {
+        name: 'Melonba / Marsden Park',
+        timings: 'To be finalised',
+        address: 'Melonba Public School\n10 Swallowtail St, Melonba NSW 2765',
+        link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUOENDS09YUUxXQ0hRUE0zNkZHOU1WU0hIRS4u",
+        bgColor: 'from-[#16a56c80] to-[#e5d1a9d0]'
+    },
 ];
 
 export function EOI() {
@@ -76,7 +96,7 @@ export function EOI() {
                         {centres.map((centre) => (
                             <div
                                 key={centre.name}
-                                className="animate-in bg-gradient-to-br from-[#b7e1ed] to-[#e5d1a9d0] rounded-2xl shadow-md hover:shadow-xl transition-shadow px-6 py-6 flex flex-col justify-between"
+                                className={`animate-in bg-gradient-to-br ${centre.bgColor} rounded-2xl shadow-md hover:shadow-xl transition-shadow px-6 py-6 flex flex-col justify-between`}
                             >
                                 <div>
                                     <h2 className="font-heading font-bold text-xl text-navy-900 mb-4 text-center">
@@ -84,16 +104,8 @@ export function EOI() {
                                     </h2>
                                     <div className="space-y-3 text-sm text-gray-700">
                                         <div>
-                                            <p className="font-semibold">Courses:</p>
-                                            <p>{centre.courses}</p>
-                                        </div>
-                                        <div>
                                             <p className="font-semibold">Class Timings:</p>
                                             <p className="whitespace-pre-line">{centre.timings}</p>
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold">Educator:</p>
-                                            <p>{centre.educator}</p>
                                         </div>
                                         <div>
                                             <p className="font-semibold">Address:</p>
@@ -104,9 +116,15 @@ export function EOI() {
                                 <div className="mt-6 flex justify-center">
                                     <Button
                                         asChild
-                                        className="bg-gradient-to-r from-[#ff0044] via-[#ff3366] to-[#3b3bff] hover:brightness-105 text-white font-semibold rounded-full px-6"
+                                        className="bg-gradient-to-r from-navy to-lime hover:brightness-105 text-white font-semibold rounded-full px-6"
                                     >
-                                        <Link to="/contact">Apply Now</Link>
+                                        <Link
+                                            target="_blank"
+                                            to={centre?.link}
+                                            aria-label={`Apply now for the ${centre.name} centre`}
+                                        >
+                                            Apply Now
+                                        </Link>
                                     </Button>
                                 </div>
                             </div>

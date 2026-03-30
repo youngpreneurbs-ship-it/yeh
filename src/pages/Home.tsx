@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Lightbulb, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Helmet } from 'react-helmet';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,7 +65,34 @@ export function Home() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-white via-gray-50/50 to-white">
+    <>
+      <Helmet>
+        <title>Youngpreneurs Business School</title>
+        <meta
+          name="description"
+          content="Entrepreneurship programs for students aged 8–18 in Sydney."
+        />
+        <link rel="canonical" href="https://youngpreneurbs.com/" />
+        <meta
+          name="keywords"
+          content="Youngpreneurs, business school for kids, entrepreneurship for children, teen entrepreneurship programs, business curriculum for students"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Youngpreneurs Business School"
+        />
+        <meta
+          property="og:description"
+          content="Entrepreneurship programs for young people in Sydney, ages 8–18."
+        />
+        <meta property="og:url" content="https://youngpreneurbs.com/" />
+        <meta
+          property="og:image"
+          content="https://youngpreneurbs.com/images/1.jpeg"
+        />
+      </Helmet>
+      <div className="bg-gradient-to-b from-white via-gray-50/50 to-white">
       {/* 1. Hero / Banner */}
       <section ref={heroRef} className="relative md:pt-20 py-6 lg:pt-0 overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:min-h-screen flex items-center">
@@ -90,6 +118,7 @@ export function Home() {
               <div className="grid sm:grid-cols-2 gap-4 pt-4">
                 <Link
                   to="/programs"
+                  aria-label="View programs for ages 8 to 11"
                   className="hero-card-green group bg-[#3db2d6a9] rounded-xl p-5 border border-gray-200 shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
                 >
                   <div className="flex items-start justify-between mb-3">
@@ -100,6 +129,7 @@ export function Home() {
                 </Link>
                 <Link
                   to="/programs"
+                  aria-label="View programs for ages 12 to 18"
                   className="hero-card-yellow group bg-[#e65b4faf] rounded-xl p-5 border border-gray-200 shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
                 >
                   <div className="flex items-start justify-between mb-3">
@@ -174,7 +204,9 @@ export function Home() {
                 <li>● Schools looking for meaningful entrepreneurship education</li>
               </ul>
               <Button asChild size="lg" className="bg-gradient-to-r from-[#1e4773] to-[#f5a200] hover:bg-[#1e4773] text-white font-medium rounded-lg px-8">
-                <Link to="/programs">View all programs <ArrowRight className="h-4 w-4 ml-2" /></Link>
+                <Link to="/programs" aria-label="View all programs">
+                  View all programs <ArrowRight className="h-4 w-4 ml-2" />
+                </Link>
               </Button>
             </div>
             <div className="animate-in relative rounded-2xl overflow-hidden shadow-lg">
@@ -221,7 +253,9 @@ export function Home() {
                 </span>
               </div>
               <Button asChild size="lg" className="bg-gradient-to-r from-[#1e4773] to-[#f5a200] hover:bg-[#1e4773] text-white font-medium rounded-lg px-8">
-                <Link to="/curriculum">View full curriculum <ArrowRight className="h-4 w-4 ml-2" /></Link>
+                <Link to="/curriculum" aria-label="View full curriculum">
+                  View full curriculum <ArrowRight className="h-4 w-4 ml-2" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -278,10 +312,13 @@ export function Home() {
             Book a free trial session and see what your child can create.
           </p>
           <Button asChild className="bg-white hover:bg-gray-100 text-navy-900 font-medium rounded-lg px-10 py-6 text-lg">
-            <Link to="/contact">Book a free trial</Link>
+            <Link to="/contact" aria-label="Book a free trial on the contact page">
+              Book a free trial
+            </Link>
           </Button>
         </div>
       </section>
     </div>
+    </>
   );
 }

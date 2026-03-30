@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components/ui/button';
+import { Helmet } from 'react-helmet';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +53,28 @@ export function Curriculum() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Curriculum | Youngpreneurs</title>
+        <meta
+          name="description"
+          content="Discover the four core Youngpreneurs modules in business, marketing, economics, and innovation."
+        />
+        <link rel="canonical" href="https://youngpreneurbs.com/curriculum" />
+        <meta
+          property="og:title"
+          content="Curriculum | Youngpreneurs"
+        />
+        <meta
+          property="og:description"
+          content="Structured entrepreneurship curriculum for young learners."
+        />
+        <meta
+          property="og:url"
+          content="https://youngpreneurbs.com/curriculum"
+        />
+      </Helmet>
+      <div ref={sectionRef} className="min-h-screen">
       <section className="relative py-12 lg:py-12 bg-[#ffffff]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="">
@@ -246,5 +268,6 @@ export function Curriculum() {
         </div>
       </section>
     </div>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Helmet } from 'react-helmet';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,7 +75,28 @@ export function Programs() {
   ];
 
   return (
-    <div ref={sectionRef} className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Programs | Youngpreneurs</title>
+        <meta
+          name="description"
+          content="Explore entrepreneurship programs for ages 8–18 at Youngpreneurs."
+        />
+        <link rel="canonical" href="https://youngpreneurbs.com/programs" />
+        <meta
+          property="og:title"
+          content="Programs | Youngpreneurs"
+        />
+        <meta
+          property="og:description"
+          content="Age-based entrepreneurship programs for young learners."
+        />
+        <meta
+          property="og:url"
+          content="https://youngpreneurbs.com/programs"
+        />
+      </Helmet>
+      <div ref={sectionRef} className="min-h-screen">
       <section className="relative py-12 lg:py-12 bg-[#ffffff] ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className=" ">
@@ -176,10 +198,13 @@ export function Programs() {
             Book a free consultation and we'll help you find the perfect fit for your child.
           </p>
           <Button asChild className="bg-white hover:bg-gray-100 text-navy-900 font-medium rounded-lg px-8">
-            <Link to="/contact">Book a free trial</Link>
+            <Link to="/contact" aria-label="Book a free trial on the contact page">
+              Book a free trial
+            </Link>
           </Button>
         </div>
       </section>
     </div>
+    </>
   );
 }

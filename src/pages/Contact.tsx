@@ -14,6 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { Helmet } from 'react-helmet';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -113,16 +114,35 @@ export function Contact() {
     },
   ];
 
-
-
   return (
+    <>
+      <Helmet>
+        <title>Contact | Youngpreneurs</title>
+        <meta
+          name="description"
+          content="Contact Youngpreneurs to book a free trial or ask about programs."
+        />
+        <link rel="canonical" href="https://youngpreneurbs.com/contact" />
+        <meta
+          property="og:title"
+          content="Contact | Youngpreneurs"
+        />
+        <meta
+          property="og:description"
+          content="Get in touch with Youngpreneurs by email, phone, or form."
+        />
+        <meta
+          property="og:url"
+          content="https://youngpreneurbs.com/contact"
+        />
+      </Helmet>
     <div ref={sectionRef} className=" min-h-screen ">
       {/* Hero - matches site CTA */}
-      <section className="relative py-12 md:py-12 bg-gradient-to-br from-[#a03dd695] via-[#16a56c32] to-[#f5a20095]">
+      <section className="relative py-12 md:py-12 bg-[#fff] " >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="animate-in font-heading font-black text-4xl sm:text-5xl lg:text-6xl mb-6">
-            <span className="bg-gradient-to-r from-[#3db2d6]  to-[#f5a20095] bg-clip-text text-transparent font-black">Get in touch</span>
+            <span className="bg-gradient-to-r from-[#5ed5f0]  to-[#f5a300dc] bg-clip-text text-transparent font-black">Get in touch</span>
             </h1>
             {/* <p className="animate-in text-black/70 text-lg lg:text-xl">
               Book a free trial session or ask us anything. We reply within 24
@@ -167,6 +187,7 @@ export function Contact() {
                             id="firstName"
                             name="firstName"
                             placeholder="John"
+                            type="text"
                             required
                             className="border-gray-200 focus:border-navy-600 focus:ring-navy-500/20"
                           />
@@ -179,6 +200,7 @@ export function Contact() {
                             id="lastName"
                             name="lastName"
                             placeholder="Doe"
+                            type="text"
                             required
                             className="border-gray-200 focus:border-navy-600 focus:ring-navy-500/20"
                           />
@@ -206,7 +228,7 @@ export function Contact() {
                         <Input
                           id="phone"
                           name="phone"
-                          type="tel"
+                          type="number"
                           placeholder="+1 (555) 000-0000"
                           className="border-gray-200 focus:border-navy-600 focus:ring-navy-500/20"
                         />
@@ -261,6 +283,7 @@ export function Contact() {
                       <Button
                         type="submit"
                         disabled={isSending}
+                        aria-label={isSending ? 'Sending your message' : 'Send message'}
                         className="w-full bg-gradient-to-r from-[#1e4773] to-[#f5a200] hover:bg-[#1e4773] text-white font-medium rounded-lg py-6 disabled:opacity-70 shadow-lg"
                       >
                         {isSending ? (
@@ -319,8 +342,7 @@ export function Contact() {
           </div>
         </div>
       </section>
-
-
     </div>
+    </>
   );
 }
