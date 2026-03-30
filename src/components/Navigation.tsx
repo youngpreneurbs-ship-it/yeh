@@ -24,6 +24,7 @@ export function Navigation() {
     { name: 'Curriculum', path: '/curriculum' },
     { name: 'Careers', target: '_blank', path: 'https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUM0NHNzFZNEZNSlpFQjg5SEZSNEtFMkVDUS4u' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Franchise', path: '/franchise' },
   ];
 
   return (

@@ -7,27 +7,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+
 import { Helmet } from 'react-helmet';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const EMAILJS_SERVICE_ID = 'service_eldl2of';
-const EMAILJS_TEMPLATE_ID = 'template_vpsj3xc';
+const EMAILJS_TEMPLATE_ID = 'template_uuxl2lk';
 
-export function Contact() {
+export function Franchise() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [interest, setInterest] = useState('');
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -63,7 +56,6 @@ export function Contact() {
       last_name: (formData.get('lastName') as string) ?? '',
       email: (formData.get('email') as string) ?? '',
       phone: (formData.get('phone') as string) ?? '',
-      interest: interest || (formData.get('interest') as string) || '',
       message: (formData.get('message') as string) ?? '',
     };
 
@@ -142,7 +134,7 @@ export function Contact() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="animate-in font-heading font-black text-4xl sm:text-5xl lg:text-6xl mb-6">
-                <span className="bg-gradient-to-r from-[#5ed5f0]  to-[#f5a300dc] bg-clip-text text-transparent font-black">Get in touch</span>
+                <span className="bg-gradient-to-r from-[#5ed5f0]  to-[#f5a300dc] bg-clip-text text-transparent font-black">Own a Youngpreneurs Franchise</span>
               </h1>
               {/* <p className="animate-in text-black/70 text-lg lg:text-xl">
               Book a free trial session or ask us anything. We reply within 24
@@ -236,34 +228,6 @@ export function Contact() {
                           />
                         </div>
 
-                        <div className="space-y-2">
-                          <Label htmlFor="interest" className="text-navy-900 font-medium">
-                            I'm interested in
-                          </Label>
-                          <Select
-                            value={interest}
-                            onValueChange={setInterest}
-                          >
-                            <SelectTrigger className="border-gray-200 focus:border-navy-600 focus:ring-navy-500/20">
-                              <SelectValue placeholder="Select an option" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="trial">
-                                Free trial session
-                              </SelectItem>
-                              <SelectItem value="8-11">
-                                Program for ages 8-11
-                              </SelectItem>
-                              <SelectItem value="12-18">
-                                Program for ages 12-18
-                              </SelectItem>
-                              <SelectItem value="school">
-                                School partnership
-                              </SelectItem>
-                              <SelectItem value="other">Other</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
 
                         <div className="space-y-2">
                           <Label htmlFor="message" className="text-navy-900 font-medium">
@@ -272,7 +236,7 @@ export function Contact() {
                           <Textarea
                             id="message"
                             name="message"
-                            placeholder="Tell us about your child or your questions..."
+                            placeholder="Tell us about your interest in owning a Youngpreneurs franchise..."
                             rows={4}
                             className="border-gray-200 focus:border-navy-600 focus:ring-navy-500/20 resize-none"
                           />

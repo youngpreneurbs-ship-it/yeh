@@ -4,10 +4,11 @@ import {
   Phone,
   MapPin,
   Instagram,
-  Twitter,
-  Linkedin,
-  Youtube,
+  // Twitter,
+  // Linkedin,
+  // Youtube,
   Globe,
+  Facebook,
 } from "lucide-react";
 
 export function Footer() {
@@ -24,6 +25,8 @@ export function Footer() {
       },
       { name: "Careers", target: '_blank', path: 'https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUM0NHNzFZNEZNSlpFQjg5SEZSNEtFMkVDUS4u' },
       { name: "Contact", path: "/contact" },
+    { name: 'Franchise', path: '/franchise' },
+
     ],
   };
 
@@ -117,19 +120,21 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <a
               href="https://www.instagram.com/youngpreneurbs/"
+              target="_blank"
               aria-label="Follow Youngpreneurs Business School on Instagram"
               className="text-gray-400 hover:text-navy-700 transition-colors"
             >
               <Instagram className="h-5 w-5" />
             </a>
             <a
-              href="#"
-              aria-label="Follow Youngpreneurs Business School on Twitter"
+              href="https://www.facebook.com/youngpreneurbs/"
+              target="_blank"
+              aria-label="Follow Youngpreneurs Business School on Facebook"
               className="text-gray-400 hover:text-navy-700 transition-colors"
             >
-              <Twitter className="h-5 w-5" />
+              <Facebook className="h-5 w-5" />
             </a>
-            <a
+            {/* <a
               href="#"
               aria-label="Connect with Youngpreneurs Business School on LinkedIn"
               className="text-gray-400 hover:text-navy-700 transition-colors"
@@ -142,7 +147,7 @@ export function Footer() {
               className="text-gray-400 hover:text-navy-700 transition-colors"
             >
               <Youtube className="h-5 w-5" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

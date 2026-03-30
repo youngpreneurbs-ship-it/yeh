@@ -8,16 +8,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const centres = [
     {
-        name: 'The Ponds',
-        timings: 'Wednesday 3:15 – 4:45 PM',
-        address: 'The Ponds High School',
+        name: 'The Ponds High School',
+        timings: 'Wednesday 3:15 – 5:15 PM',
+        address: 'Classrooms E06 & E08 (Next to COLA, Basketball Courts)',
         link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUM0NUWTVPNzhMMkNRMFM5Q0k1N0g1Rk8zTi4u",
         bgColor: 'from-[#b7e1ed] to-[#f5a300d0]'
     },
     {
+        name: 'Rouse Hill Town Centre',
+        timings: 'Saturday 12:00 – 2:00 PM',
+        address: 'Level 2, Rex Money Room, Vinegar Hill Memorial Community Centre',
+        link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUOEhXSTFKNEpYVEtSSDVaVzlNVFVYQ0xOWi4u",
+        bgColor: 'from-[#3db2d6] to-[#e5d1a9d0]'
+    },
+    {
         name: 'Bella Vista',
-        timings: 'Saturday 12:45 – 2:15 PM',
-        address: 'Suite 10, Level 1, 4A Meridian Place, Bella Vista, NSW 2153',
+        timings: 'To be finalised',
+        address: 'To be finalised',
         link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUOFRKQkxCT0dZQ0FVWlY1Qk1WRDJRSEdKVS4u",
         bgColor: 'from-[#f5a300d0] to-[#16a56c80]'
     },
@@ -28,13 +35,7 @@ const centres = [
         link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUMjRRWEJROEdMS1ZHQlg3QUdGMzU3UThGVS4u",
         bgColor: 'from-[#16a56c80] to-[#3db2d6]'
     },
-    {
-        name: 'Rouse Hill',
-        timings: 'To be finalised',
-        address: 'Vinegar Hill Memorial Community Centre',
-        link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUOEhXSTFKNEpYVEtSSDVaVzlNVFVYQ0xOWi4u",
-        bgColor: 'from-[#3db2d6] to-[#e5d1a9d0]'
-    },
+
     {
         name: 'Box Hill',
         timings: 'To be finalised',
@@ -45,7 +46,7 @@ const centres = [
     {
         name: 'Melonba / Marsden Park',
         timings: 'To be finalised',
-        address: 'Melonba Public School\n10 Swallowtail St, Melonba NSW 2765',
+        address: 'To be finalised',
         link: "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cI7zrtUOENDS09YUUxXQ0hRUE0zNkZHOU1WU0hIRS4u",
         bgColor: 'from-[#16a56c80] to-[#e5d1a9d0]'
     },
@@ -86,9 +87,8 @@ export function EOI() {
 
                             Expression of Interest
                         </h1>
-                        <p className="animate-in text-gray-600 text-lg max-w-2xl mx-auto">
-                            Explore our current class locations and timings. Choose a centre that works for you and book a free
-                            trial to experience our programs.
+                        <p className="animate-in text-gray-600 text-2xl max-w-2xl mx-auto">
+                            Explore our current class locations and timings.
                         </p>
                     </div>
 

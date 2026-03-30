@@ -191,15 +191,15 @@ export function Programs() {
 
       <section className="py-20 lg:py-32 bg-gradient-to-br from-navy via-navy-800 to-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="animate-in font-heading font-black text-3xl sm:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-white via-gray-100 to-lime-200 bg-clip-text text-transparent">
-            Not sure which program is right?
+          <h2 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-white via-gray-100 to-lime-200 bg-clip-text text-transparent">
+            Ready to learn more?
           </h2>
-          <p className="animate-in text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Book a free consultation and we'll help you find the perfect fit for your child.
+          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            Submit an Expression Of Interest to learn more about our programs.
           </p>
-          <Button asChild className="bg-white hover:bg-gray-100 text-navy-900 font-medium rounded-lg px-8">
-            <Link to="/contact" aria-label="Book a free trial on the contact page">
-              Book a free trial
+          <Button asChild className="bg-white hover:bg-gray-100 text-navy-900 font-medium rounded-lg px-10 py-6 text-lg">
+            <Link to="/eoi" aria-label="Submit an Expression Of Interest">
+              Submit an Expression Of Interest
             </Link>
           </Button>
         </div>

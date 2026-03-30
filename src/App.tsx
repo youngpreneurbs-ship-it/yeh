@@ -15,6 +15,7 @@ import { Programs } from './pages/Programs';
 import { Curriculum } from './pages/Curriculum';
 import { Contact } from './pages/Contact';
 import { EOI } from './pages/eoi';
+import { Franchise } from './pages/Franchise';
 function App() {
   return (
     <Router>
@@ -28,6 +29,8 @@ function App() {
             <Route path="/curriculum" element={<Curriculum />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/eoi" element={<EOI />} />
+            <Route path="/franchise" element={<Franchise />} />
+
           </Routes>
         </main>
         <Footer />
