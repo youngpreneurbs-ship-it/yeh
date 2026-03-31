@@ -76,14 +76,30 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-2">
             <Button
               asChild
               className="bg-navy hover:bg-navy-800 text-white font-medium rounded-lg px-6"
             >
               <Link to="/eoi" aria-label="Expression of interest form">
                 Expression Of Interest
+              </Link>
+            </Button>
+            <Button
+              asChild
+              className="bg-lime hover:bg-lime-600 text-white font-medium rounded-lg px-6"
+            >
+              <Link
+                to="/register"
+                aria-label="Register"
+                onClick={() => {
+                  if (location.pathname === "/register") {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
+              >
+                Register
               </Link>
             </Button>
           </div>
@@ -127,7 +143,7 @@ export function Navigation() {
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-4 px-4">
+              <div className="pt-4 px-4 flex flex-col gap-2">
                 <Button
                   asChild
                   className="bg-navy hover:bg-navy-800 text-white font-medium rounded-lg px-6 w-full "
@@ -146,7 +162,26 @@ export function Navigation() {
                     Expression Of Interest
                   </Link>
                 </Button>
+                <Button
+                  asChild
+                  className="bg-lime hover:bg-lime-600 text-white font-medium rounded-lg px-6 w-full "
+                >
+                  <Link
+                    to="/register"
+                    aria-label="Register"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      if (location.pathname === "/register") {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }
+                    }}
+                  >
+                    Register
+                  </Link>
+                </Button>
+
               </div>
+         
             </div>
           </div>
         )}
