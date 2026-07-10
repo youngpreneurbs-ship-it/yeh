@@ -91,15 +91,12 @@ export function Navigation() {
               className="bg-lime hover:bg-lime-600 text-white font-medium rounded-lg px-6"
             >
               <Link
-                to="/register"
-                aria-label="Register"
-                onClick={() => {
-                  if (location.pathname === "/register") {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }
-                }}
+                to="https://forms.office.com/r/HNS2746Dq0"
+                aria-label="Enrol"
+                target="_blank"
+
               >
-                Register
+                Enrol
               </Link>
             </Button>
           </div>
@@ -181,7 +178,7 @@ export function Navigation() {
                 </Button>
 
               </div>
-         
+
             </div>
           </div>
         )}
